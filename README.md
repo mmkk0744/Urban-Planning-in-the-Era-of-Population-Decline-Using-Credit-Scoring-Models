@@ -17,7 +17,78 @@
 - 정책 결정자, 관련 기관, 일반 시민들이 데이터를 쉽게 해석하고 활용할 수 있도록 지원합니다.
 
 ## 2. 분석배경
-![Image](https://github.com/user-attachments/assets/0ef7456b-4713-4bb0-8891-bc4e5044987a)
+<img src="https://github.com/user-attachments/assets/e04c41fa-4be8-4b9c-9311-7f89effd19a6" width="800">
+<img src="https://github.com/user-attachments/assets/0ef7456b-4713-4bb0-8891-bc4e5044987a" width="800">
+
 - 대구광역시의 인구 감소 문제: 지역사회 발전과 지속 가능성은 인구 동태에 영향을 받지만, 대구는 심각한 인구 감소에 직면해 있음.
 - 청년층 수도권 유출: 2022년 기준, 대구에서 1만 1519명의 순유출 발생, 특히 20대 청년층의 유출이 두드러짐.
 - 산업 구조 문제: 대기업 본사·공장·연구소 부족, 중소기업 비중이 높은 산업 구조로 인해 주요 대학 졸업생들이 타 지역으로 유출되는 현상이 지속됨.
+
+## 3. 분석요약
+### 1️⃣ 활용 데이터
+<table border="1">
+    <thead>
+        <tr>
+            <th>부문</th>
+            <th>세부 항목</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>인구 부문</strong></td>
+            <td>주민등록인구 및 세대 현황, 고령 인구, 20~39세 여성 인구</td>
+        </tr>
+        <tr>
+            <td><strong>경제 부문</strong></td>
+            <td>현대카드 나이대별 매출 데이터, 총 종사자 수</td>
+        </tr>
+        <tr>
+            <td><strong>생활서비스 부문</strong></td>
+            <td>은행·부동산업 종사자 수</td>
+        </tr>
+        <tr>
+            <td><strong>여가생활 부문</strong></td>
+            <td>생활체육시설·노래방 종사자 수</td>
+        </tr>
+        <tr>
+            <td><strong>음식 부문</strong></td>
+            <td>카페·패스트푸드 종사자 수</td>
+        </tr>
+        <tr>
+            <td><strong>교육 부문</strong></td>
+            <td>기술직업훈련·어린이보육원·초등·중등·고등학교·어학원 종사자 수</td>
+        </tr>
+        <tr>
+            <td><strong>교통 부문</strong></td>
+            <td>이륜차·PM 사고 건수, 교통량</td>
+        </tr>
+        <tr>
+            <td><strong>공공 부문</strong></td>
+            <td>경찰·행정기관 종사자 수</td>
+        </tr>
+    </tbody>
+</table>
+
+### 2️⃣ 분석 도구
+Python, QGIS, Tableau
+
+### 3️⃣ 분석 기법
+신용평가모형 개발 (scorecardpy)
+
+- 모델링 및 변수 선택
+  1. 로지스틱 회귀모형
+  2. Information Value (IV) 기반 변수 선택
+  3. WOE Binning (계급 세분화)
+  4. Fine classing & Coarse classing
+  5. K-S 통계량 기반 변수 선택
+  6. 독립 표본 t-검정 (Independent Samples t-test)
+  7. 스피어만 상관계수 기반 다중공선성 확인
+  8. LASSO 회귀모형을 활용한 변수 선택
+
+모형 성능 및 안정성 평가
+- AUROC, K-S 통계량, PSI(모형 안정성 평가)
+- Score 등급화 및 위험률 역전 현상 확인
+
+## 4. 분석방법
+
+
