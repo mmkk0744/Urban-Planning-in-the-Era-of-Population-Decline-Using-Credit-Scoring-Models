@@ -97,6 +97,7 @@ Python, QGIS, Tableau, SQL
 <img src="https://github.com/user-attachments/assets/9c755564-5dba-48b6-9ce8-1f1cf2579a0f" width="1000">
 
 - 정의: 만 20 ~ 39세 여성 인구를 만 65세 이상 인구로 나눈 값으로, 일본 사회학자 마스다 히로야가 처음 개념화한 지표입니다.
+
 위험 기준:
 <table border="1">
     <thead>
@@ -294,4 +295,7 @@ Python, QGIS, Tableau, SQL
     </tbody>
 </table>
 
-
+### 4️⃣ 소멸 위험 등급화 및 역전 현상 방지
+- 로지스틱 회귀 기반 스코어 카드 생성
+- 읍면동별 소멸 위험도를 5개 등급으로 분류
+- 각 등급 간 위험도가 순차적으로 증가하도록 설계하여 역전 현상 방지
